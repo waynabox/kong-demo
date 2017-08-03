@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  api:
+    volumes:
+      - "./source:/deploy/source"
+    image: tripsme_image
+    ports:
+      - "6622:5000"
+  database:
+    image: mongo:3.0.2
+    ports:
+      - "27017:27017"
